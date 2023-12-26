@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HWT Coffee&Tee</title>
+    <style>
+    
+        body {
+            background-color: #384358;
+            margin: 0;
+            padding: 0;
+        }
+
+        .table-container {
+            background-color: #ffa586;
+            padding: 8px 15px;
+            border-radius: 10px;
+            width: 93%;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .table-container a {
+            text-decoration: none;
+            color: #515151;
+            font-family: 'Poppins Medium';
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .table-container a:hover {
+            color: #ffffff;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 20%;
+            padding: 0;
+            text-align: center;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 150%;
+            color: #ffffff;
+            padding: 20px 0;
+        }
+
+        .wrapper {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .header {
+            text-align: center;
+            font-size: 200%;
+            font-family: 'Poppins Medium';
+            color: #ffffff;
+            padding: 20px 0;
+        }
+
+        .main {
+            padding: 25px 35px;
+            color: #ffffff;
+            font-family: 'Poppins Medium';
+        }
+
+        /* Стилі для випадаючого вікна */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffa586;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border: 2px solid #555; 
+            z-index: 1;
+            width: auto; 
+            top: 100%;
+            left: 0;
+        }
+
+        .table-container .menu-link:hover + .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #515151;
+            padding: 8px 15px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+<div>
+    <header class="header"> HWT Coffee&Tee </header>
+</div>
+
+<div class="table-container">
+    <table>
+        <tr>
+            <td> <a href="#" class="menu-link">Menu</a> </td>
+            <td> <a href="delivery_payment.html">Delivery and payment</a> </td>
+            <td> <a href="contacts.html">Contacts</a> </td>
+            <td> <a href="reviews.html">Reviews</a> </td>
+            <td> <a href="basket.html">Basket</a> </td>
+        </tr>
+    </table>
+    <div class="dropdown-content">
+        <a href="coffee.html">Coffee</a>
+        <a href="tea.html">Tea</a>
+        <a href="breakfast.html">Breakfast</a>
+        <a href="desserts.html">Desserts</a>
+        <a href="cold-bevarges.html">Cold Bevarges</a>
+    </div>
+</div>
+
+<div>
+    <main class="main"> Тут буде основна інформація про цей сайт та заклад </main>
+</div>
+
+<div class="wrapper">
+    <footer class="footer">© 2023 HWT Coffee&Tee. All rights reserved.</footer>
+</div>
+
+
+
+
+<script>
+    // Отримання посилання на пункт "Menu" та відповідного випадаючого вікна
+    var menuLink = document.querySelector('.table-container .menu-link');
+    var dropdownContent = document.querySelector('.table-container .dropdown-content');
+
+    // Додавання обробника подій для кліка на пункті "Menu"
+    menuLink.addEventListener('click', function(event) {
+        // Заборона переходу за посиланням
+        event.preventDefault();
+        
+        // Зміна видимості вікна при кліку
+        dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+    });
+</script>
+
+
+
+
+</body>
+</html>
